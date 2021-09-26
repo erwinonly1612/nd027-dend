@@ -1,13 +1,13 @@
 # Data Modeling for Sparkify (Music-Streaming Startup)
 
 ## Introduction
-![SparkifyLogo](img/SparkifyLogo.png)
+![SparkifyLogo](img/SparkifyLogo.PNG)
 
 A music-streaming startup called Sparkify wants to effectively analyze their exponentially-growing data related to songs and user activities on its platform. The Sparkify management team has assigned the task of analyzing the data to the analytics team, in which I belong to. 
 
 To begin this journey, we decided to build a scalable data warehouse system, which integrates various datasets, such as songs and user-activities, from the Sparkify app.
 
-![SparkifyDataWarehouse](img/SparkifyDataWarehouse.png)
+![SparkifyDataWarehouse](img/SparkifyDataWarehouse.PNG)
 
 ## Project Datasets
 * Song data: 'data/song_data'  
