@@ -3,9 +3,20 @@ import glob
 import psycopg2
 import pandas as pd
 from sql_queries import *
-
+from sqlalchemy_schemadisplay import create_schema_graph
+from sqlalchemy import MetaData
 
 def process_song_file(cur, filepath):
+    '''
+    Process song json file in song_data filepath and then insert the song json data into both artist_table and song_table in the sparkifydb database.
+    
+    Args:
+        cur (cursor): cursor() in psycopg2 to allow Python code to execute PostgreSQL command in a database session.    
+        filepath (str): directory of the song json files
+    
+    Returns:
+        None
+    '''
     # open song file
     df = pd.read_json(filepath, lines= True)
     
@@ -19,6 +30,16 @@ def process_song_file(cur, filepath):
     
     
 def process_log_file(cur, filepath):
+    '''
+    Process log json file in log_data filepath and then insert the log json data into both songplay_table in the sparkifydb database.
+    
+    Args:
+        cur (cursor): cursor() in psycopg2 to allow Python code to execute PostgreSQL command in a database session.    
+        filepath (str): directory of the log json files
+    
+    Returns:
+        None
+    '''
     # open log file
     df = pd.read_json(filepath, lines=True)
 
@@ -61,6 +82,19 @@ def process_log_file(cur, filepath):
 
 
 def process_data(cur, conn, filepath, func):
+    '''
+    process song_data and log_data in filepath.
+    
+    Args:
+        cur (cursor): cursor() in psycopg2 to allow Python code to execute PostgreSQL command in a database session.    
+        conn (connection): connection in psycopg2 to handle the connection to a PostgreSQL database instance.
+        filepath (str): directory of the song.json files.
+        func (): functions to process log data and json data.
+    
+    Returns:
+        None
+    '''
+    
     # get all files matching extension from directory
     all_files = []
     for root, dirs, files in os.walk(filepath):
@@ -80,6 +114,10 @@ def process_data(cur, conn, filepath, func):
 
 
 def main():
+    '''
+        connect to sparkifydb database and then process song data and log data
+    '''
+    
     conn = psycopg2.connect("host=127.0.0.1 dbname=sparkifydb user=student password=student")
     cur = conn.cursor()
 
@@ -87,7 +125,10 @@ def main():
     process_data(cur, conn, filepath='data/log_data', func=process_log_file)
 
     conn.close()
-
+    
+    # create ER diagram of sparkifydb. Uncomment to regenerate the ER Diagram.
+    #graph = create_schema_graph(metadata=MetaData('postgresql://student:student@127.0.0.1/sparkifydb'))
+    #graph.write_png('img/sparkifydb_erd.png')
 
 if __name__ == "__main__":
     main()

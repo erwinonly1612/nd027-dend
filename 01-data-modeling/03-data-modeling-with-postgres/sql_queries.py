@@ -11,11 +11,11 @@ time_table_drop = "DROP TABLE IF EXISTS time"
 songplay_table_create = ("""
     CREATE TABLE IF NOT EXISTS songplays 
         (songplay_id serial PRIMARY KEY, 
-        start_time timestamp, 
-        user_id int NOT NULL REFERENCES users(user_id),
+        start_time timestamp NOT NULL, 
+        user_id int NOT NULL,
         level varchar, 
-        song_id varchar REFERENCES songs(song_id), 
-        artist_id varchar REFERENCES artists(artist_id),
+        song_id varchar, 
+        artist_id varchar,
         session_id varchar, 
         location varchar, 
         user_agent varchar);
@@ -34,7 +34,7 @@ song_table_create = ("""
     CREATE TABLE IF NOT EXISTS songs 
     (song_id varchar PRIMARY KEY, 
     title varchar, 
-    artist_id varchar REFERENCES artists(artist_id),
+    artist_id varchar,
     year int, 
     duration numeric);
 """)
@@ -117,4 +117,4 @@ song_select = (""" SELECT songs.song_id, artists.artist_id
 # QUERY LISTS
 
 create_table_queries = [user_table_create, artist_table_create, song_table_create, time_table_create, songplay_table_create]
-drop_table_queries = [songplay_table_drop, time_table_create, song_table_create, artist_table_create, user_table_create]
+drop_table_queries = [songplay_table_drop, user_table_drop, song_table_drop, artist_table_drop, time_table_drop]

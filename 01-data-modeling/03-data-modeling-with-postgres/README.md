@@ -9,6 +9,9 @@ To begin this journey, we decided to build a scalable data warehouse system, whi
 
 ![SparkifyDataWarehouse](img/SparkifyDataWarehouse.PNG)
 
+## Sparkify ER Diagram
+![SparkifyERDiagram](img/sparkifydb_erd.png)
+
 ## Project Datasets
 * Song data: 'data/song_data'  
 * Log data: 'data/log_data' 
