@@ -1,0 +1,44 @@
+Data Dictionary:
+The first 4 tables have been created using Spark and AWS PostgreSQL separately.
+
+dfratings/dimRatings: including ratings information.
+  userId             integer NOT NULL,
+  movieId            integer NOT NULL,
+  rating             DOUBLE PRECISION NOT NULL,
+  rate_time          timestamp,
+  year               integer,
+  PRIMARY KEY(userId, movieId)
+
+User Ids: users were selected randomly for inclusion. No additional information was provided for users.
+
+Movie Ids: only movies with at least one rating/tag are included in the dataset. These movie ids are consistent in these files.
+
+ratings: Each rating score was made by each user for one movie.
+
+rate_time: time when user rated the movie.
+
+movies/dimMovies: including movie information.
+  movieId      integer NOT NULL PRIMARY KEY,
+  title        varchar(300) NOT NULL,
+  year         varchar(10) NOT NULL
+
+dfgenre/dimGenres: including genre information for each movie.
+  genreId            int8 NOT NULL PRIMARY KEY
+  movieId            integer NOT NULL,
+  genre              varchar(20) NOT NULL,
+
+genreId was created randomly to make it as a unique key for this table. Each movie can have multiple genre types.
+
+dfawards3/dimAwards3: including number of awards and nominations that each movie received. Movie included here is from Wikipedia.
+  nominations        integer NOT NULL,
+  film               varchar(300) NOT NULL,
+  year               integer NOT NULL,
+  awards             double precision NOT NULL,
+  PRIMARY KEY(film, year)
+
+dimDate: including date information from ratings table.
+  date_key           timestamp NOT NULL PRIMARY KEY,
+  year               smallint NOT NULL,
+  month              smallint NOT NULL,
+  day                smallint NOT NULL,
+  week               smallint NOT NULL

@@ -1,0 +1,77 @@
+Film   |Year   |Awards    |Nominations
+Becket  |1964    |1   |12
+Ben-Hur |1959    |11  |12
+Dances with Wolves  |1990    |7   |12
+The English Patient |1996    |9   |12
+Gladiator   |2000    |5   |12
+Johnny Belinda  |1948    |1   |12
+Lincoln |2012    |2   |12
+Mrs. Miniver    |1942    |6   |12
+My Fair Lady    |1964    |8   |12
+On the Waterfront   |1954    |8   |12
+Reds    |1981    |3   |12
+Schindler's List    |1993    |7   |12
+The Song of Bernadette  |1943    |4   |12
+A Streetcar Named Desire    |1951    |4   |12
+The King's Speech   |2010    |4   |12
+The Revenant    |2015    |3   |12
+Amadeus |1984    |8   |11
+The Aviator |2004    |5   |11
+Chinatown   |1974    |1   |11
+Gandhi  |1982    |8   |11
+The Godfather Part II   |1974    |6   |11
+Hugo    |2011    |5   |11
+Joker   |2019    |2   |11
+Judgment at Nuremberg   |1961    |2   |11
+Julia   |1977    |3   |11
+Life of Pi  |2012    |4   |11
+The Lord of the Rings: The Return of the King   |2003    |11  |11
+Mr. Smith Goes to Washington    |1939    |1   |11
+Oliver! |1968    |5   |11
+Out of Africa   |1985    |7   |11
+A Passage to India  |1984    |2   |11
+The Pride of the Yankees    |1942    |1   |11
+Rebecca |1940    |2   |11
+Saving Private Ryan |1998    |5   |11
+Sergeant York   |1941    |2   |11
+Sunset Boulevard    |1950    |3   |11
+Terms of Endearment |1983    |5   |11
+West Side Story |1961    |10  |11
+1917    |2019    |3   |10
+Airport |1970    |1   |10
+Anne of the Thousand Days   |1969    |1   |10
+The Apartment   |1960    |5   |10
+Bonnie and Clyde    |1967    |2   |10
+Braveheart  |1995    |5   |10
+Bugsy   |1991    |2   |10
+Cabaret |1972    |8   |10
+Crouching Tiger, Hidden Dragon  |2000    |4   |10
+Doctor Zhivago  |1965    |5   |10
+The Exorcist    |1973    |2   |10
+Giant   |1956    |1   |10
+The Godfather   |1972    |3   |10
+Going My Way    |1944    |7   |10
+Gravity |2013    |7   |10
+Guess Who's Coming to Dinner    |1967    |2   |10
+How Green Was My Valley |1941    |5   |10
+Lawrence of Arabia  |1962    |7   |10
+The Life of Emile Zola  |1937    |3   |10
+Mad Max: Fury Road  |2015    |6   |10
+Master and Commander: The Far Side of the World |2003    |2   |10
+Network |1976    |4   |10
+On Golden Pond  |1981    |3   |10
+Once Upon a Time in Hollywood   |2019    |2   |10
+Patton  |1970    |7   |10
+Rocky   |1976    |3   |10
+Roma    |2018    |3   |10
+Roman Holiday   |1953    |3   |10
+Sayonara    |1957    |4   |10
+Slumdog Millionaire |2008    |8   |10
+The Sound of Music  |1965    |5   |10
+Star Wars   |1977    |6   |10
+The Sting   |1973    |7   |10
+The Artist  |2011    |5   |10
+The Favourite   |2018    |1   |10
+Tom Jones   |1963    |4   |10
+Tootsie |1982    |1   |10
+Wilson  |1944    |5   |10
